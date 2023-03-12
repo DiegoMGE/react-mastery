@@ -160,3 +160,53 @@ In this case we use **MouseEvent** but there's more, and _always_ have to import
 ```Typescript
 import { MouseEvent } from "react";
 ```
+
+# Managing States 🎮
+
+To dynamically interact with items for example, we have to use a **Hook**, this means we need to use _useState_ function.
+
+> this allows up to _tap in build-in features_ in React.
+
+This tell React that _a component can have data or state_ that **will change over time**.
+
+> each component is going to have its own state.
+
+# Passing data via props 📚
+
+Props are the inputs to our components
+
+If we use a feature called **Interface**, we define the shape or interface of an object, name it what we need.
+
+```Typescript
+interface Props {
+  items: string[];
+  heading: string;
+}
+```
+
+# Passing Functions via props 📚
+
+If we need dynamically want to:
+
+- show something to the user.
+- filter list of objects.
+- redirect to a new page when an item is selected.
+
+Inside the component implementation from before, we have to add the function we gonna use later:
+
+```Typescript
+interface Props {
+  items: string[];
+  heading: string;
+  // (item: string) => void
+  onSelectItem: (item: string) => void;
+}
+```
+
+We have to implement it in the _parent of the component_.
+
+```Typescript
+const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
+```
