@@ -210,3 +210,22 @@ const handleSelectItem = (item: string) => {
     console.log(item);
   };
 ```
+
+# State vs Props 🧠
+
+- **State**: data managed by a component that can change over time, we have to treat them as **Mutable**. Mutable means that is not **read-only**.
+  - similar to local _variables inside a function_.
+- **Props**: input passed to a component, we have to treat them as **Inmmutable**. Inmutable means that is **read-only**.
+  - similar to function args.
+
+# Passing Children 🚸
+
+This is like passing an item into a `<div>`. To implement this well enough, we need to use the **ReactNode** _class_ to use different types of data.
+
+```Typescript
+interface Props {
+  children: ReactNode;
+}
+```
+
+.
