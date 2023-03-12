@@ -75,3 +75,24 @@ function ListGroup() {
 ```
 
 All _children inside_ the _empty brackets_ are interpreted like using **Fragment** but without typing it.
+
+# Rendering a List 📃
+
+In React, when rendering a list of items using **.map()**, we have to assign them a _unique key_ to each one.
+
+```Typescript
+function ListGroup() {
+  const items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+
+  return (
+    <>
+      <h1>List</h1>
+      <ul className="list-group">
+        {items.map((item) => (
+          <li key={item}>{item}</li> // This is the right way to do it
+        ))}
+      </ul>
+    </>
+  );
+}
+```
