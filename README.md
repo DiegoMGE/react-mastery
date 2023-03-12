@@ -1,4 +1,5 @@
 <h1 align="center">Mastering React 18 ⚛</h1>
+This is for my notes from all my journey with React 18, and throught time, all this information would change to just explain what my project is.
 
 React is a **JavaScript library** for creating _dynamic apps_ with _beatifull UI_.
 
