@@ -1,4 +1,5 @@
 <h1 align="center">Mastering React 18 ⚛</h1>
+
 This is for my notes from all my journey with React 18, and throught time, all this information would change to just explain what my project is.
 
 React is a **JavaScript library** for creating _dynamic apps_ with _beatifull UI_.
@@ -50,3 +51,27 @@ The main purpose from **React** is to create amazing _UI_. For also for couple m
 - **Internationalization**.
 - **Form validation**.
 - **Animations**.
+
+By convention, all the **components** should stay in a folder called _"components"_.
+
+# Fragments 📚
+
+A component _can't return more than one element_. There's a solution like **wrapping** all the elements inside a `<div>`, but there is even a better option, using the **Fragment** bracket option from _React itself_, and can be shorted with list _empty brackets_.
+
+```Typescript
+function ListGroup() {
+  return (
+    <>
+      <ul className="list-group">
+        <li className="list-group-item">An item</li>
+        <li className="list-group-item">A second item</li>
+        <li className="list-group-item">A third item</li>
+        <li className="list-group-item">A fourth item</li>
+        <li className="list-group-item">And a fifth one</li>
+      </ul>
+    </>
+  );
+}
+```
+
+All _children inside_ the _empty brackets_ are interpreted like using **Fragment** but without typing it.
