@@ -116,3 +116,47 @@ return (
     </>
   );
 ```
+
+# Handling Events ☝🏻
+
+Event handling sometimes can be complex, that's why should be inside a **function**.
+
+```Typescript
+import { MouseEvent } from "react";
+
+function ListGroup() {
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+
+  // better way to handle "Handling Events"
+  const handleClick = (event: MouseEvent) => console.log(event);
+
+  return (
+    <>
+      <h1>List</h1>
+      {items.length === 0 && <p>No item found</p>}
+      <ul className="list-group">
+        {items.map((item, index) => (
+          // using the Handling Event in "onClick" event
+          <li className="list-group-item" key={item} onClick={handleClick}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+```
+
+### Type Annotation
+
+We can specify the the type of variables, parameters and so on.
+
+```Typescript
+const handleClick = (event: MouseEvent) => console.log(event); // event: MouseEvent
+```
+
+In this case we use **MouseEvent** but there's more, and _always_ have to import it to our application so we can use it properly.
+
+```Typescript
+import { MouseEvent } from "react";
+```
