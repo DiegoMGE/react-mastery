@@ -96,3 +96,23 @@ function ListGroup() {
   );
 }
 ```
+
+# Conditional Rendering 🕹
+
+Functions are powerful with _parameters_, so if we create one to display a Message for example, we can display different Message depending on what we need.
+
+If we don't need to show differents messages, is better to use it as a _constant_ instead of a **function**.
+
+```Typescript
+return (
+    <>
+      <h1>List</h1>
+      {items.length === 0 && <p>No item found</p>} // Like this
+      <ul className="list-group">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </>
+  );
+```
