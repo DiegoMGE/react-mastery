@@ -227,5 +227,3 @@ interface Props {
   children: ReactNode;
 }
 ```
-
-.
