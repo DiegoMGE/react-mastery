@@ -1,27 +1,16 @@
-import Like from "./components/Like";
-import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 function App() {
-  let items = [
-    "New York",
-    "San Francisco",
-    "Tokyo",
-    "London",
-    "Paris",
-    "Suiza",
-  ];
-
-  const handleSelectItem = (item: string) => {
-    console.log(item);
+  let handleOnClick = () => {
+    console.log("Clicked!");
   };
 
   return (
     <div>
-      <ListGroup
-        items={items}
-        heading="Cities"
-        onSelectItem={handleSelectItem}
-      />
+      <Button color="warning" onClick={handleOnClick}>
+        A button!
+      </Button>
     </div>
   );
 }

@@ -3,12 +3,10 @@ import { useState } from "react";
 interface Props {
   items: string[];
   heading: string;
-  // (item: string) => void
   onSelectItem: (item: string) => void;
 }
 
 function ListGroup({ items, heading, onSelectItem }: Props) {
-  // This is a "Hook"
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
